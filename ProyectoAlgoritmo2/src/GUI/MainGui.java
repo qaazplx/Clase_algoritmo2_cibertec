@@ -17,9 +17,11 @@ public class MainGui extends JFrame {
 	private JMenu mnMantenimiento;
 	private JMenu mnVentas;
 	private JMenu mnAlmacen;
-	private JMenu nmReportes;
+	private JMenu rReportes;
 	private JMenuItem miClientes;
 	private JMenuItem miProductos;
+	private JMenuItem alNR;
+	private JMenuItem mntmNewMenuItem;
 
 	/**
 	 * Launch the application.
@@ -68,16 +70,24 @@ public class MainGui extends JFrame {
 				mnVentas = new JMenu("Ventas");
 				menuBar.add(mnVentas);
 				
-				JMenuItem mntmNewMenuItem = new JMenuItem("New menu item");
-				mnVentas.add(mntmNewMenuItem);
+				JMenuItem vRegistro = new JMenuItem("Registro");
+				mnVentas.add(vRegistro);
 			}
 			{
 				mnAlmacen = new JMenu("Almacen");
 				menuBar.add(mnAlmacen);
+				{
+					alNR = new JMenuItem("Nuevo Registro");
+					mnAlmacen.add(alNR);
+				}
 			}
 			{
-				nmReportes = new JMenu("Reportes");
-				menuBar.add(nmReportes);
+				rReportes = new JMenu("Reportes");
+				menuBar.add(rReportes);
+				{
+					mntmNewMenuItem = new JMenuItem("Generador de Reportes");
+					rReportes.add(mntmNewMenuItem);
+				}
 			}
 		}
 	}
